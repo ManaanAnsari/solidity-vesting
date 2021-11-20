@@ -7,14 +7,10 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 
 contract Token is ERC20{
-
-    uint256 public totalSupply = 1e26;
-    
-    constructor(
-        address _vesting
-    ) 
+    // mint 100 million tokens    
+    constructor() 
     ERC20("Token","TKN"){
-        _mint(_vesting,_totalSupply);
+        _mint(msg.sender,1e26);
     }
 }
 
